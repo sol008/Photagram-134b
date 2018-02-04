@@ -1,5 +1,8 @@
 <!DOCTYPE html> 
 <html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Register Account</title>  
 <style>
 body {font-family: Arial;}
 * {box-sizing: border-box}
@@ -30,7 +33,7 @@ button {
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
-  border: none
+  border: none;
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
@@ -62,9 +65,10 @@ button {
   }
 }
 </style>
+</head>
 
   <body style="background-color:powderblue;"> 
-    <form action="/register_page.php" style="border:1px soldi #ccc">
+    <form action="/register_page.php" style="border:1px solid #ccc">
       <div class="container">
         <h1>Photogram</h1>
         <hr>
@@ -83,7 +87,7 @@ button {
         <input type="password" placeholder="Enter Password" name="password" required>
 
         <label><b>Confirm Password</b></label>
-        <input type="password" placeholder="Confirm Password" name"cPassword" required>
+        <input type="password" placeholder="Confirm Password" name="cPassword" required>
 
         <label>
           <input type="checkbox" checked="checked" style="margin-bottom:15px"> Remember me

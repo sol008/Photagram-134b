@@ -1,6 +1,8 @@
 <!DOCTYPE html> 
 <html> 
 <head>
+<meta charset="utf-8"/>
+<title>Check Out</title> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {font-family: Arial;}
@@ -15,7 +17,7 @@ input[type=text], input[type=password] {
 }
 
 input[type=text]:focus, input[type=password]:focus {
-  background-color:: #ddd; 
+  background-color: #ddd; 
   outline: none;
 }
 
@@ -37,6 +39,10 @@ img {
 }
 
 .orderbtn {
+  height: 25px; 
+  width: 50px; 
+  text-align: center;
+  text-decoration: none; 
   cursor: pointer; 
 }
 
@@ -45,7 +51,6 @@ img {
 <body style="background-color:#8633ff">
   <h1>Photogram</h1>
   <h2>Check Out</h2>
-  <form action="/checkout_page.php">
     <div class="imgcontainer">
       <img src="creditcard.png" alt="Card Icon">
     </div>
@@ -60,11 +65,11 @@ img {
         <br>
         <input type="password" placeholder="xxxx-xxxx-xxxx-xxxx" name="cardnumber" required>
         <br>
-        <label></b>Valid Thru</b></label>
+        <label><b>Valid Thru</b></label>
         <br>
         <input type="text" placeholder="MM / YY" name="date" required>
         <br>
-        <label></b>CVV / CVC *</b></label>
+        <label><b>CVV / CVC *</b></label>
         <br>
         <input type="password" placeholder="Enter three digits" name="verificaiton" required>
         <br> 
@@ -74,11 +79,11 @@ img {
       <div class="column-2">
         <p><strong>Order Summary:</strong></p>
         <br>
-        <p>The total amount is: $40</p>
-      </div>
-      <br>
-        <button class="orderbtn"><a href="orderPlacedPage.html">Order</a></button>
+        <p>The total amount is: $40</p> 
+        <form action="orderPlacedPage.html">
+          <button class="orderbtn">Order</button>
+        </form> 
+      </div> 
     </div>
-  </form>
 </body>
 </html>

@@ -28,20 +28,18 @@ hr {
   margin-bottom: 25px;
 }
 
-/* Set style for all buttons */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
+.wrapper {
+  text-align: center; 
 }
 
-button:hover {
-  opacity: 0.8;
+/* Set style for all buttons */
+#button {
+  background-color: white; 
+  color: black; 
+  border: 2px solid;
+  cursor: pointer;
+  position: absolute;
+  opacity: 0.9;
 }
 
 .imgcontainer {
@@ -86,8 +84,8 @@ span.account {
 </style>
 </head>
   <body style="background-color:yellow;"> 
-    <h1>Photogram</h1> 
-    <form action="/login_page.php">
+    <h1>Photagram</h1> 
+    <form action="/loginPage.php">
       <div class="imgcontainer">
         <img src="avatar1.png" alt="Avatar Icon">
       </div>
@@ -95,22 +93,29 @@ span.account {
 
       <div class="container">
         <label><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" required>
+        <input type="text" placeholder="Enter Email" name="email">
 
         <label><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
+        <input type="password" placeholder="Enter Password" name="password">
      
-        <button type="submit">Sign in</button> 
-
         <label>
           <input type="checkbox" checked="checked"> Remember me
         </label>
       </div>
-       
-      <span class="pwd">Forgot <a href="#">password?</a></span>
-      <br>
-      <span class="newaccount">Don't have an <a href="#">account?</a></span>
-    </form>
+    </form> 
 
+    <div class="wrapper">
+      <button id="myButton">Sign in</button>
+
+      <script type="text/javascript">
+        document.getElementById("myButton").onclick = function() {
+          location.href = "mainPage.html"; 
+        };
+      </script>
+    </div>
+
+    <span class="pwd">Forgot <a href="newPassword.html">password?</a></span>
+    <br>
+    <span class="newaccount">Don't have an <a href="registerPage.html">account?</a></span>
   </body>
 </html>

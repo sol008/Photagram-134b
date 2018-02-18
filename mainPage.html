@@ -195,23 +195,23 @@
 
  <div class="row">
    <div class="column">
-    <img id="myImg1" src="6.jpg" style="width:100%" class="hover-shadow cursor">
+    <img id="myImg6" onclick="fun1(this.id)" ondblclick="fun2(this.id)" src="6.jpg" style="width:100%" class="hover-shadow cursor">
     <a href="profiles.html">➣➣➣</a>
   </div>
   <div class="column">
-    <img id="myImg2" src="7.jpg" style="width:100%" class="hover-shadow cursor">
+    <img id="myImg7" onclick="fun1(this.id)" ondblclick="fun2(this.id)" src="7.jpg" style="width:100%" class="hover-shadow cursor">
     <a href="profiles.html">➣➣➣</a>
   </div>
   <div class="column">
-    <img id="myImg3" src="8.jpg" style="width:100%" class="hover-shadow cursor">
+    <img id="myImg8" onclick="fun1(this.id)" ondblclick="fun2(this.id)" src="8.jpg" style="width:100%" class="hover-shadow cursor">
     <a href="profiles.html">➣➣➣</a>
   </div>
   <div class="column">
-    <img id="myImg4" src="14.jpg" style="width:100%" class="hover-shadow cursor">
+    <img id="myImg14" onclick="fun1(this.id)" ondblclick="fun2(this.id)" src="14.jpg" style="width:100%" class="hover-shadow cursor">
     <a href="profiles.html">➣➣➣</a>
   </div>
   <div class="column">
-    <img id="myImg5" src="15.jpg" style="width:100%" class="hover-shadow cursor">
+    <img id="myImg14" onclick="fun1(this.id)" ondblclick="fun2(this.id)" src="15.jpg" style="width:100%" class="hover-shadow cursor">
     <a href="profiles.html">➣➣➣</a>
   </div>
 </div>
@@ -228,23 +228,23 @@
 <h1 style="color:white">Photographs  <a href="Pictures.html" target="_top">(View All)</a></h1> 
 <div class="row">
    <div class="column">
-    <img id="myImg1" src="1.jpg" style="width:100%" class="hover-shadow cursor">
+    <img id="myImg1" onclick="fun1(this.id)" ondblclick="fun2(this.id)" src="1.jpg" style="width:100%" class="hover-shadow cursor">
     <a href="profiles.html">➣➣➣</a>
   </div>
   <div class="column">
-    <img id="myImg2" src="2.jpg" style="width:100%" class="hover-shadow cursor">
+    <img id="myImg2" onclick="fun1(this.id)" ondblclick="fun2(this.id)" src="2.jpg" style="width:100%" class="hover-shadow cursor">
     <a href="profiles.html">➣➣➣</a>
   </div>
   <div class="column">
-    <img id="myImg3" src="3.jpg" style="width:100%" class="hover-shadow cursor">
+    <img id="myImg3" onclick="fun1(this.id)" ondblclick="fun2(this.id)" src="3.jpg" style="width:100%" class="hover-shadow cursor">
     <a href="profiles.html">➣➣➣</a>
   </div>
   <div class="column">
-    <img id="myImg4" src="4.jpg" style="width:100%" class="hover-shadow cursor">
+    <img id="myImg4" onclick="fun1(this.id)" ondblclick="fun2(this.id)" src="4.jpg" style="width:100%" class="hover-shadow cursor">
     <a href="profiles.html">➣➣➣</a>
   </div>
   <div class="column">
-    <img id="myImg5" src="5.jpg" style="width:100%" class="hover-shadow cursor">
+    <img id="myImg5" onclick="fun1(this.id)" ondblclick="fun2(this.id)" src="5.jpg" style="width:100%" class="hover-shadow cursor">
     <a href="profiles.html">➣➣➣</a>
   </div>
 </div>
@@ -279,23 +279,23 @@
 <h1 style="color:white">Paintings  <a href="Paintings.html" target="_top">(View All)</a></h1>      
 <div class="row">
    <div class="column">
-    <img id="myImg1" src="11.jpg" style="width:100%" class="hover-shadow cursor">
+    <img id="myImg11" onclick="fun1(this.id)" ondblclick="fun2(this.id)" src="11.jpg" style="width:100%" class="hover-shadow cursor">
     <a href="profiles.html">➣➣➣</a>
   </div>
   <div class="column">
-    <img id="myImg2" src="12.jpg" style="width:100%" class="hover-shadow cursor">
+    <img id="myImg12" onclick="fun1(this.id)" ondblclick="fun2(this.id)" src="12.jpg" style="width:100%" class="hover-shadow cursor">
     <a href="profiles.html">➣➣➣</a>
   </div>
   <div class="column">
-    <img id="myImg3" src="13.jpg" style="width:100%" class="hover-shadow cursor">
+    <img id="myImg13" onclick="fun1(this.id)" ondblclick="fun2(this.id)" src="13.jpg" style="width:100%" class="hover-shadow cursor">
     <a href="profiles.html">➣➣➣</a>
   </div>
   <div class="column">
-    <img id="myImg4" src="14.jpg" style="width:100%" class="hover-shadow cursor">
+    <img id="myImg14" onclick="fun1(this.id)" ondblclick="fun2(this.id)" src="14.jpg" style="width:100%" class="hover-shadow cursor">
     <a href="profiles.html">➣➣➣</a>
   </div>
   <div class="column">
-    <img id="myImg5" src="15.jpg" style="width:100%" class="hover-shadow cursor">
+    <img id="myImg15" onclick="fun1(this.id)" ondblclick="fun2(this.id)" src="15.jpg" style="width:100%" class="hover-shadow cursor">
     <a href="profiles.html">➣➣➣</a>
   </div>
 </div>
@@ -310,13 +310,13 @@
 var modal = document.getElementById('myModal');
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById('myImg2');
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
-img.onclick = function(){
+function fun1(id){
+    var img =document.getElementById(id);
     modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
+    modalImg.src = img.src;
+    captionText.innerHTML = img.alt;
 }
 
 // Get the <span> element that closes the modal
@@ -326,10 +326,15 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() { 
     modal.style.display = "none";
 }
+function fun2(id){
+  location.href = "profiles.html";
+}
 
 function pop() {
     alert("About us");
 }
+
+
 </script>
 
 

@@ -96,8 +96,18 @@ button {
         <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
         <div class="clear">
-          <button type="button" class="cancelbtn">Cancel</button>
-          <button type="submit" class="signupbtn">Join Us</button>
+          <button type="button" id="cbt" class="cancelbtn">Cancel</button>
+          <button type="submit" id="sbt" class="signupbtn">Join Us</button>
+
+          <script type="text/javascript">
+            document.getElementById("cbt").onclick = function() {
+              location.href = "mainPage.html"; 
+            }; 
+            
+            document.getElementById("sbt").onclick = function() {
+              location.href = "mainPage2.html"; 
+            }; 
+          </script> 
         </div>
       </div>
     </form>

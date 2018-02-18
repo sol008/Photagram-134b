@@ -15,6 +15,9 @@
           var anchor = anchors[i];
           // anchor.style.display = 'none';
           // anchors[i].onmouseover = show(anchors[i]);
+          anchor.onclick = function(){
+            this.style.display = "none";
+          }
           anchor.onmouseover = function(){
             this.children[1].style.display = "block";
           }
@@ -119,19 +122,19 @@ function myFunction() {
       <h2>Works</h2>
       <table>
 		<tr>
-    <th ><div class="img_container"><img src="1.jpg" alt="6" style="width:240px;height:240px;" /><div class="mask">description...</div></div></th>
-    <th ><div class="img_container"><img src="2.jpg" alt="6" style="width:240px;height:240px;" /><div class="mask">description...</div></div></th>
-    <th ><div class="img_container"><img src="3.jpg" alt="6" style="width:240px;height:240px;" /><div class="mask">description...</div></div></th>
+    <th ><div class="img_container"><img src="1.jpg" style="width:240px;height:240px;" /><div class="mask">description...</div></div></th>
+    <th ><div class="img_container"><img src="2.jpg" style="width:240px;height:240px;" /><div class="mask">description...</div></div></th>
+    <th ><div class="img_container"><img src="3.jpg" style="width:240px;height:240px;" /><div class="mask">description...</div></div></th>
 		</tr>
 		<tr>
-    <th ><div class="img_container"><img src="4.jpg" alt="6" style="width:240px;height:240px;" /><div class="mask">description...</div></div></th>
-    <th ><div class="img_container"><img src="5.jpg" alt="6" style="width:240px;height:240px;" /><div class="mask">description...</div></div></th>
-    <th ><div class="img_container"><img src="6.jpg" alt="6" style="width:240px;height:240px;" /><div class="mask">description...</div></div></th>
+    <th ><div class="img_container"><img src="4.jpg" style="width:240px;height:240px;" /><div class="mask">description...</div></div></th>
+    <th ><div class="img_container"><img src="5.jpg" style="width:240px;height:240px;" /><div class="mask">description...</div></div></th>
+    <th ><div class="img_container"><img src="6.jpg" style="width:240px;height:240px;" /><div class="mask">description...</div></div></th>
 		</tr>
 		<tr>
-    <th ><div class="img_container"><img src="7.jpg" alt="6" style="width:240px;height:240px;" /><div class="mask">description...</div></div></th>
-    <th ><div class="img_container"><img src="8.jpg" alt="6" style="width:240px;height:240px;" /><div class="mask">description...</div></div></th>
-    <th ><div class="img_container"><img src="11.jpg" alt="6" style="width:240px;height:240px;" /><div class="mask">description...</div></div></th>
+    <th ><div class="img_container"><img src="7.jpg"  style="width:240px;height:240px;" /><div class="mask">description...</div></div></th>
+    <th ><div class="img_container"><img src="8.jpg"  style="width:240px;height:240px;" /><div class="mask">description...</div></div></th>
+    <th ><div class="img_container"><img src="11.jpg"  style="width:240px;height:240px;" /><div class="mask">description...</div></div></th>
 		</tr>
 	</table>
 	<h2>Reviews</h2>

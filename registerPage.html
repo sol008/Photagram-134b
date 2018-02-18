@@ -27,7 +27,7 @@ hr {
   margin-bottom: 25px;
 }
 
-/* Set style for all buttons */
+/* Set style for all buttons 
 button {
   background-color: #4CAF50;
   color: white;
@@ -44,9 +44,20 @@ button {
   background-color: #f44336;
 }
 
-.cancelbtn, .signupbtn {
-  float: left;
+.cancelbtn{
+  float: center;
   width: 50%;
+}
+*/
+.signupbtn{
+   width: 20%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
 }
 
 .container {
@@ -57,6 +68,14 @@ button {
   content: "";
   clear: both;
   display: table;
+}
+
+.center {
+  position: relative; 
+  text-align: center; 
+}
+.wrapHead {
+  color: white; 
 }
 
 @media screen and (max-width: 300px) {
@@ -78,16 +97,16 @@ button {
         <hr>
 
         <label><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" required>
+        <input type="text" placeholder="Enter Email" name="email">
 
         <label><b>User Name</b></label> 
-        <input type="text" placeholder="Enter Name" name="userName" required>
+        <input type="text" placeholder="Enter Name" name="userName">
 
         <label><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
+        <input type="password" placeholder="Enter Password" name="password">
 
         <label><b>Confirm Password</b></label>
-        <input type="password" placeholder="Confirm Password" name="cPassword" required>
+        <input type="password" placeholder="Confirm Password" name="cPassword">
 
         <label>
           <input type="checkbox" checked="checked" style="margin-bottom:15px"> Remember me
@@ -96,11 +115,22 @@ button {
         <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
         <div class="clear">
-          <button type="button" class="cancelbtn">Cancel</button>
-          <button type="submit" class="signupbtn">Join Us</button>
+
+          <script type="text/javascript">
+            document.getElementById("cbt").onclick = function() {
+              location.href = "mainPage.html"; 
+            }; 
+             
+          </script> 
         </div>
       </div>
     </form>
-
+    <div class="center">
+    <button type="submit" id="sbt" class="signupbtn">Join Us</button>
+  </div>
+    <script>document.getElementById("sbt").onclick = function() {
+              location.href = "mainPage2.html"; 
+            }; 
+          </script>
   </body>
 </html>

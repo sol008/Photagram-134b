@@ -62,6 +62,115 @@
                 background-color: transparent;
                 text-decoration: none;
             }   
+
+
+    .row > .column {
+      padding: 0 8px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .column {
+      float: left;
+      width: 240px;
+    }
+
+    .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+
+    /* The Close Button */
+    .close {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .cursor {
+      cursor: pointer;
+    }
+
+
+    .hover-shadow:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    }
+
+
+    .row > .column {
+      padding: 0 8px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .column {
+      float: left;
+      width: 230px;
+    }
+
+    .popup{
+      cursor: pointer;
+    }
     </style>
     </head>
     <body style="background-color:black">
@@ -86,9 +195,70 @@
             <option value="Like Count">Like Count</option>
             <option value="Comment Count">Comment Count</option>
         </select></h4>
-        <footer>
-            <p>About Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact</p>
-            <p>Copyright &copy;photagram.com</p>
-        </footer>
+        <h1 style="color:white">Paintings  <a href="Paintings.html" target="_top">(View All)</a></h1>      
+<div class="row">
+   <div class="column">
+    <img id="myImg1" src="11.jpg" style="width:100%" class="hover-shadow cursor">
+    <a href="profiles.html">➣➣➣</a>
+  </div>
+  <div class="column">
+    <img id="myImg2" src="12.jpg" style="width:100%" class="hover-shadow cursor">
+    <a href="profiles.html">➣➣➣</a>
+  </div>
+  <div class="column">
+    <img id="myImg3" src="13.jpg" style="width:100%" class="hover-shadow cursor">
+    <a href="profiles.html">➣➣➣</a>
+  </div>
+  <div class="column">
+    <img id="myImg4" src="14.jpg" style="width:100%" class="hover-shadow cursor">
+    <a href="profiles.html">➣➣➣</a>
+  </div>
+  <div class="column">
+    <img id="myImg5" src="15.jpg" style="width:100%" class="hover-shadow cursor">
+    <a href="profiles.html">➣➣➣</a>
+  </div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<footer>
+  <div class="popup" onclick="pop()">About Us</div>
+  <p>Copyright &copy;photagram.com</p>
+</footer>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
+function pop() {
+    alert("About us");
+}
+</script>
+
+
     </body>
 </html>

@@ -42,7 +42,7 @@
     var o = obj.ChatValue;
     if (o.value.length>0){
       document.getElementById("ChatContent").innerHTML += "You say: "+o.value+"<br/>";
-      document.getElementById("ChatContent").innerHTML += "Autoreply: "+o.value+"<br/>";
+      document.getElementById("ChatContent").innerHTML += "Autoreply: Hi"+"<br/>";
       o.value='';
     }
   }
@@ -130,7 +130,9 @@
     <div class="card">
       <div class="checkOffer">
      <form style="display: inline" action="checkOffers.html" method="get">
-        <button class = "button button2">MyOffer</button>
+        <button class = "button button2">My Offer</button>
+      <form style="display: inline" action="myOrder.html" method="get">
+        <button class = "button button3">My Order</button>
     </form>
      
 	  </div>

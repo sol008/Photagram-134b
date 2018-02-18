@@ -33,11 +33,23 @@
 
 
 
+
+
     }
         function ChatHidden(){document.getElementById("ChatBody").style.display = "none";}
         function ChatShow(){document.getElementById("ChatBody").style.display = "block";}
         function ChatClose(){document.getElementById("chatWindow").style.display = "none";}
 
+function myFunction() {
+  var y = document.getElementById("new").value; 
+  document.getElementById("d").innerHTML = y;
+  if (document.getElementById("new").style.display === "none"){
+      document.getElementById("new").style.display = "block";
+  }
+  else 
+    {document.getElementById("new").style.display = "none";}
+
+}
   function ChatSend(obj){
     var o = obj.ChatValue;
     if (o.value.length>0){
@@ -101,7 +113,9 @@
     <div class="card">
       <h2>Intro</h2>
 
-      <p>Some text..</p>
+      <p  id = "d"></p>
+      <input type="text" placeholder="Enter something..." id= "new" style = "display: none;" =>
+      <button class = "button" onclick="myFunction()" >Edit Intro</button>
       <h2>Works</h2>
       <table>
 		<tr>
